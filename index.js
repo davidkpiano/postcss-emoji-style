@@ -31,6 +31,8 @@ var replacements = {
   none: ['🙅'],
   rem: ['🐏'],
   '0.3s': ['🔜'],
+  important: ['❗', '❕'],
+  
 }
 
 module.exports = postcss.plugin('postcss-emoji-style',function (opts) {
