@@ -1,89 +1,58 @@
-# PostCSS Inline SVG [![Build Status][travis-img]][travis]
+# PostCSS Emoji Style
 
-[PostCSS] plugin to reference an SVG file and control its attributes with CSS syntax.
+PostCSS plugin that lets you write your CSS using emojis instead of alphanumeric characters.
 
-[PostCSS]: https://github.com/postcss/postcss
-[travis-img]:  https://travis-ci.org/TrySound/postcss-inline-svg.svg
-[travis]:      https://travis-ci.org/TrySound/postcss-inline-svg
+**Example:**
 
 ```css
-@svg-load nav url(img/nav.svg) {
-    fill: #cfc;
-    path:nth-child(2) {
-        fill: #ff0;
-    }
+body {
+  display: 💪;
+  💪-direction: 🚣;
+  ⚖-😌: 💪-🔚;
+  📖-align: 👉;
 }
-.nav {
-    background: svg-inline(nav);
-}
-.up {
-    background: svg-load(img/arrow-up.svg, fill=#000, stroke=#fff);
+
+.foo {
+  🍑: 10px;
+  background-📷: 🙅;
+  📦-sizing: 🛂-📦;
+  🎈: 👈;
+  📶: 5🐏;
+  animation-⌛: 🔜;
+  z-📇: 1;
+  word-💔: 💔-all;
 }
 ```
 
-```css
-.nav {
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23cfc'%3E%3Cpath d='...'/%3E%3Cpath d='...' fill='%23ff0'/%3E%3Cpath d='...'/%3E%3C/svg%3E");
-}
-.up {
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg fill='%23000' stroke='%23fff'%3E...%3C/svg%3E");
-}
-```
-
-PostCSS parsers allow to use different syntax (but only one syntax in one svg-load() definition):
+**Result:**
 
 ```css
-.up {
-    background: svg-load(img/arrow-up.svg, fill: #000, stroke: #fff);
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
 }
-.down {
-    background: svg-load(img/arrow-down.svg, fill=#000, stroke=#fff);
+
+.foo {
+  bottom: 10px;
+  background-image: none;
+  box-sizing: border-box;
+  float: left;
+  height: 5rem;
+  animation-duration: 0.3s;
+  z-index: 1;
+  word-break: break-all;
 }
 ```
 
 ## Usage
 
 ```js
-postcss([ require('postcss-inline-svg')(options) ])
-```
-
-See [PostCSS] docs for examples for your environment.
-
-### Options
-
-#### options.path
-
-Path which will resolve url
-
-Default: `false` - path will be relative to source file if it was specified
-
-#### options.encode
-
-Enable light url encode which replaces `<`, `>`, `&`, `#`
-
-Default: true
-
-#### options.transform(data, path, opts)
-
-Function which transforms svg content as you like. If result is falsy will be used default transform. Result should includes data:uri prefix and quotes.
-
-> options.encode affects only default transform
-
-
-## Optimisation
-
-Add [postcss-svgo](https://github.com/ben-eb/postcss-svgo)
-or [cssnano](https://github.com/ben-eb/cssnano)
-(includes postcss-svgo) in your plugin list to minify svg images automatically.
-
-```js
-postcss([
-    require('postcss-inline-svg'),
-    require('postcss-svgo')
-])
+postcss([ require('postcss-emoji-style')() ])
 ```
 
 
-# License
+## License
 
-MIT © [Bogdan Chadkin](mailto:trysound@yandex.ru)
+MIT
