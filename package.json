@@ -1,0 +1,31 @@
+{
+  "name": "postcss-emoji-style",
+  "version": "0.1.0",
+  "description": "PostCSS plugin",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "emoji"
+  ],
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "author": "Bogdan Chadkin <trysound@yandex.ru>",
+  "license": "MIT",
+  "repository": "davidkpiano/postcss-emoji-style",
+  "bugs": {
+    "url": "https://github.com/davidkpiano/postcss-emoji-style/issues"
+  },
+  "homepage": "https://github.com/davidkpiano/postcss-emoji-style",
+  "dependencies": {
+    "postcss": "^5.0.14"
+  },
+  "scripts": {
+    "start": ""
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
