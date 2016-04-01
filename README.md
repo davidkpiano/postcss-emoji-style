@@ -58,7 +58,7 @@ postcss([ require('postcss-emoji-style')() ])
 
 - **Is this for real?** Yes.
 - **Which emojis can I use?** All the ones in the [index.js file](https://github.com/davidkpiano/postcss-emoji-style/blob/master/index.js).
-- **Should I use this plugin?** ~~probably not~~ ¯\\_(ツ)_/¯
+- **Should I use this plugin?** ~~probably not~~ ¯\\\_(ツ)\_/¯
 - **This doesn't seem like a better way to write my CSS.** And that doesn't seem like a question.
 
 
